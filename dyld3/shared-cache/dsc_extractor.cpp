@@ -38,9 +38,6 @@
 #include <Availability.h>
 
 #include "CodeSigningTypes.h"
-#include <CommonCrypto/CommonHMAC.h>
-#include <CommonCrypto/CommonDigest.h>
-#include <CommonCrypto/CommonDigestSPI.h>
 
 #define NO_ULEB
 #include "Architectures.hpp"

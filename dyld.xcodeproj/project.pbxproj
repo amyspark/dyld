@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -16,7 +16,6 @@
 			dependencies = (
 				C1BF4DC32359390A00B0F1AE /* PBXTargetDependency */,
 				F94182DA1E60F0C000D8EF25 /* PBXTargetDependency */,
-				F94182DC1E60F16900D8EF25 /* PBXTargetDependency */,
 				C187B90C1FE067590042D3B7 /* PBXTargetDependency */,
 			);
 			name = update_dyld_shared_cache;
@@ -32,7 +31,6 @@
 				C1B4759723E65F9600515793 /* PBXTargetDependency */,
 				C1C6403B23E4EC3000ED4B46 /* PBXTargetDependency */,
 				C1C6403923E4EC1C00ED4B46 /* PBXTargetDependency */,
-				C1C6403723E4EC1300ED4B46 /* PBXTargetDependency */,
 			);
 			name = dyld_executables;
 			productName = dyld_executables;
@@ -107,6 +105,7 @@
 		37D7DB011E96F3EB00D52CEA /* Tracing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37D7DAFE1E96F0ED00D52CEA /* Tracing.cpp */; };
 		37F597D52061ED0B00F9B6F9 /* dyld_usage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F597D42061ECFF00F9B6F9 /* dyld_usage.cpp */; };
 		37F597D72061ED3200F9B6F9 /* libktrace.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F597D62061ED3200F9B6F9 /* libktrace.tbd */; };
+		84C9B56D29C50DCD002339BA /* libSystem.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9B56C29C50DCC002339BA /* libSystem.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
 		C116F19C23F4B11B002D386B /* RootsChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C116F19A23F4B11B002D386B /* RootsChecker.cpp */; };
 		C116F19D23F4B11B002D386B /* RootsChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C116F19A23F4B11B002D386B /* RootsChecker.cpp */; };
 		C116F19E23F4B11B002D386B /* RootsChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C116F19A23F4B11B002D386B /* RootsChecker.cpp */; };
@@ -189,12 +188,6 @@
 		C1F003CE213F3CB4002D9DC9 /* ClosureFileSystemNull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F003CB213F3CB4002D9DC9 /* ClosureFileSystemNull.cpp */; };
 		C1F003CF213F3CB4002D9DC9 /* ClosureFileSystemNull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F003CB213F3CB4002D9DC9 /* ClosureFileSystemNull.cpp */; };
 		C1F003D0213F3CB4002D9DC9 /* ClosureFileSystemNull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1F003CB213F3CB4002D9DC9 /* ClosureFileSystemNull.cpp */; };
-		DE49C496238EC55300CD7FFB /* DyldSharedCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98692141DC3EF6C00CBEDE6 /* DyldSharedCache.cpp */; };
-		DE49C497238EC57B00CD7FFB /* Diagnostics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F986921B1DC3F07C00CBEDE6 /* Diagnostics.cpp */; };
-		DE49C499238EC59500CD7FFB /* MachOFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9A5E6191F5F1BFA0030C490 /* MachOFile.cpp */; };
-		DE49C49A238EC5AD00CD7FFB /* MachOLoaded.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9A5E6151F5C967C0030C490 /* MachOLoaded.cpp */; };
-		DE49C49C238EC60D00CD7FFB /* Closure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9DFEA6F1F50FDE5003BF8A7 /* Closure.cpp */; };
-		DE49C4A3238EEE3400CD7FFB /* dsc_iterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9F2A56E0F7AEEE300B7C9EB /* dsc_iterator.cpp */; };
 		DE728E53210CD74E00EB5409 /* dyld_usage.1 in Install man page */ = {isa = PBXBuildFile; fileRef = DE728E52210CD6B700EB5409 /* dyld_usage.1 */; };
 		DE9A811323982A3A00664840 /* dsc_iterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9F2A56E0F7AEEE300B7C9EB /* dsc_iterator.cpp */; };
 		E9C2FAD823AA8B5C0077E966 /* IMPCaches.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C2FAD723AA8B5C0077E966 /* IMPCaches.cpp */; };
@@ -298,7 +291,7 @@
 		F97D395523A1CBB600BD3B5A /* MachOFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9A5E6191F5F1BFA0030C490 /* MachOFile.cpp */; };
 		F97D395623A1CBB600BD3B5A /* MachOLoaded.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9A5E6151F5C967C0030C490 /* MachOLoaded.cpp */; };
 		F97D395723A1CBCA00BD3B5A /* Diagnostics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F986921B1DC3F07C00CBEDE6 /* Diagnostics.cpp */; };
-		F97D395823A97B2C00BD3B5A /* dsc_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9CE30781208F1B50098B590 /* dsc_extractor.cpp */; };
+		F97D395823A97B2C00BD3B5A /* dsc_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9CE30781208F1B50098B590 /* dsc_extractor.cpp */; platformFilters = (ios, tvos, watchos, ); };
 		F97FF3611C23640C000ACDD2 /* nocr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F97FF35F1C236402000ACDD2 /* nocr.cpp */; };
 		F97FF3641C237F68000ACDD2 /* nocr.1 in install man page */ = {isa = PBXBuildFile; fileRef = F97FF3631C237F5C000ACDD2 /* nocr.1 */; };
 		F98692171DC3EFD500CBEDE6 /* update_dyld_shared_cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98692151DC3EF6C00CBEDE6 /* update_dyld_shared_cache.cpp */; };
@@ -322,7 +315,6 @@
 		F9CC10D81F5F1D4E0021BFE2 /* MachOFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9A5E6191F5F1BFA0030C490 /* MachOFile.cpp */; };
 		F9CE307A1208F1B50098B590 /* dsc_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9CE30781208F1B50098B590 /* dsc_extractor.cpp */; };
 		F9CE307B1208F1C60098B590 /* dsc_extractor.h in usr|local|include|mach-o */ = {isa = PBXBuildFile; fileRef = F9CE30791208F1B50098B590 /* dsc_extractor.h */; };
-		F9D1001814D8D13D00099D91 /* dsc_extractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9CE30781208F1B50098B590 /* dsc_extractor.cpp */; };
 		F9D49CCC1458B95200F86ADD /* start_glue.s in Sources */ = {isa = PBXBuildFile; fileRef = F9D49CCB1458B95200F86ADD /* start_glue.s */; };
 		F9D862451DC975A5000A199A /* dyld_closure_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9D862441DC9759C000A199A /* dyld_closure_util.cpp */; };
 		F9D862461DC975AA000A199A /* Diagnostics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F986921B1DC3F07C00CBEDE6 /* Diagnostics.cpp */; };
@@ -490,13 +482,6 @@
 			remoteGlobalIDString = C1BF4DAF2359254500B0F1AE;
 			remoteInfo = libKernelCollectionBuilder;
 		};
-		C1C6403623E4EC1300ED4B46 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F9ED4C8B0630A72300DF4E74 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F9D1001114D8D0BA00099D91;
-			remoteInfo = dsc_extractor;
-		};
 		C1C6403823E4EC1C00ED4B46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9ED4C8B0630A72300DF4E74 /* Project object */;
@@ -524,13 +509,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = F9F2A5580F7AEE9800B7C9EB;
 			remoteInfo = libdsc;
-		};
-		F94182DB1E60F16900D8EF25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F9ED4C8B0630A72300DF4E74 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F9D1001114D8D0BA00099D91;
-			remoteInfo = dsc_extractor;
 		};
 		F9A8E1AF24120DD000CEB6BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -767,6 +745,9 @@
 		37F597D42061ECFF00F9B6F9 /* dyld_usage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dyld_usage.cpp; path = src/dyld_usage.cpp; sourceTree = "<group>"; };
 		37F597D62061ED3200F9B6F9 /* libktrace.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libktrace.tbd; path = usr/lib/libktrace.tbd; sourceTree = SDKROOT; };
 		37F7A5961BB363820039043A /* Bom.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bom.framework; path = System/Library/PrivateFrameworks/Bom.framework; sourceTree = SDKROOT; };
+		84C9B56829C507C5002339BA /* dsc_extractor.bundle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = dsc_extractor.bundle; path = ../../../usr/lib/dsc_extractor.bundle; sourceTree = "<group>"; };
+		84C9B56A29C50CC1002339BA /* libsystem_platform.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsystem_platform.dylib; path = ../../../usr/lib/system/libsystem_platform.dylib; sourceTree = "<group>"; };
+		84C9B56C29C50DCC002339BA /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
 		A5E247802369485F00BDED2F /* dlfcn_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = dlfcn_private.h; path = include/dlfcn_private.h; sourceTree = "<group>"; };
 		C116F19A23F4B11B002D386B /* RootsChecker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = RootsChecker.cpp; path = dyld3/RootsChecker.cpp; sourceTree = "<group>"; };
 		C116F19B23F4B11B002D386B /* RootsChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RootsChecker.h; path = dyld3/RootsChecker.h; sourceTree = "<group>"; };
@@ -906,7 +887,6 @@
 		F9CE30781208F1B50098B590 /* dsc_extractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dsc_extractor.cpp; path = "dyld3/shared-cache/dsc_extractor.cpp"; sourceTree = "<group>"; };
 		F9CE30791208F1B50098B590 /* dsc_extractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dsc_extractor.h; path = "dyld3/shared-cache/dsc_extractor.h"; sourceTree = "<group>"; };
 		F9CF4C8121E59D060013ACDF /* libdyld_driverkit.exp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.exports; name = libdyld_driverkit.exp; path = src/libdyld_driverkit.exp; sourceTree = "<group>"; };
-		F9D1001214D8D0BA00099D91 /* dsc_extractor.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = dsc_extractor.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D238D90A9E19A0002B55C7 /* update_dyld_shared_cache.1 */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.man; path = update_dyld_shared_cache.1; sourceTree = "<group>"; };
 		F9D49CCB1458B95200F86ADD /* start_glue.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = start_glue.s; path = src/start_glue.s; sourceTree = "<group>"; };
 		F9D862441DC9759C000A199A /* dyld_closure_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dyld_closure_util.cpp; path = "dyld3/shared-cache/dyld_closure_util.cpp"; sourceTree = "<group>"; usesTabs = 0; };
@@ -1059,13 +1039,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9D1001014D8D0BA00099D91 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				84C9B56D29C50DCD002339BA /* libSystem.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1204,6 +1178,9 @@
 		F94C22231E513CA90079E5DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84C9B56C29C50DCC002339BA /* libSystem.tbd */,
+				84C9B56A29C50CC1002339BA /* libsystem_platform.dylib */,
+				84C9B56829C507C5002339BA /* dsc_extractor.bundle */,
 				E9EC319F240B19C1001705D6 /* Foundation.framework */,
 				37F597D62061ED3200F9B6F9 /* libktrace.tbd */,
 				37F7A5961BB363820039043A /* Bom.framework */,
@@ -1365,7 +1342,6 @@
 				F93937320A94FAF700070A07 /* update_dyld_shared_cache */,
 				F9F2A5590F7AEE9800B7C9EB /* libdsc.a */,
 				F99B8E670FEC121100701838 /* dyld_shared_cache_util */,
-				F9D1001214D8D0BA00099D91 /* dsc_extractor.bundle */,
 				3703A1241B38C1B300ADBA7F /* dyld_shared_cache_builder */,
 				F97C61A71DBAD1A900A84CD7 /* dyld_closure_util */,
 				F96354451DCD74A400895049 /* update_dyld_sim_shared_cache */,
@@ -1788,22 +1764,6 @@
 			productReference = F99B8E670FEC121100701838 /* dyld_shared_cache_util */;
 			productType = "com.apple.product-type.tool";
 		};
-		F9D1001114D8D0BA00099D91 /* dsc_extractor */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F9D1001714D8D0F100099D91 /* Build configuration list for PBXNativeTarget "dsc_extractor" */;
-			buildPhases = (
-				F9D1000F14D8D0BA00099D91 /* Sources */,
-				F9D1001014D8D0BA00099D91 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = dsc_extractor;
-			productName = dsc_extractor;
-			productReference = F9D1001214D8D0BA00099D91 /* dsc_extractor.bundle */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
 		F9ED4C970630A76000DF4E74 /* dyld */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9D8C7DD087B087300E93EFB /* Build configuration list for PBXNativeTarget "dyld" */;
@@ -1950,7 +1910,6 @@
 				F99B8E550FEC10F600701838 /* dyld_shared_cache_util */,
 				F97C61A61DBAD1A900A84CD7 /* dyld_closure_util */,
 				F9F2A5580F7AEE9800B7C9EB /* libdsc */,
-				F9D1001114D8D0BA00099D91 /* dsc_extractor */,
 				C187B8FF1FE063A40042D3B7 /* libslc_builder.dylib */,
 				F9F6F4271C1FB0A700BD8FED /* dyld_tests */,
 				F97FF3551C23638F000ACDD2 /* nocr */,
@@ -2483,20 +2442,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9D1000F14D8D0BA00099D91 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE49C499238EC59500CD7FFB /* MachOFile.cpp in Sources */,
-				DE49C497238EC57B00CD7FFB /* Diagnostics.cpp in Sources */,
-				DE49C4A3238EEE3400CD7FFB /* dsc_iterator.cpp in Sources */,
-				DE49C49C238EC60D00CD7FFB /* Closure.cpp in Sources */,
-				DE49C496238EC55300CD7FFB /* DyldSharedCache.cpp in Sources */,
-				DE49C49A238EC5AD00CD7FFB /* MachOLoaded.cpp in Sources */,
-				F9D1001814D8D13D00099D91 /* dsc_extractor.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F9ED4C950630A76000DF4E74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2625,11 +2570,6 @@
 			target = C1BF4DAF2359254500B0F1AE /* libKernelCollectionBuilder */;
 			targetProxy = C1BF4DC22359390A00B0F1AE /* PBXContainerItemProxy */;
 		};
-		C1C6403723E4EC1300ED4B46 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F9D1001114D8D0BA00099D91 /* dsc_extractor */;
-			targetProxy = C1C6403623E4EC1300ED4B46 /* PBXContainerItemProxy */;
-		};
 		C1C6403923E4EC1C00ED4B46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F99B8E550FEC10F600701838 /* dyld_shared_cache_util */;
@@ -2649,11 +2589,6 @@
 			isa = PBXTargetDependency;
 			target = F9F2A5580F7AEE9800B7C9EB /* libdsc */;
 			targetProxy = F94182D91E60F0C000D8EF25 /* PBXContainerItemProxy */;
-		};
-		F94182DC1E60F16900D8EF25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F9D1001114D8D0BA00099D91 /* dsc_extractor */;
-			targetProxy = F94182DB1E60F16900D8EF25 /* PBXContainerItemProxy */;
 		};
 		F9A8E1B024120DD000CEB6BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2820,7 +2755,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = local_test_runner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -2829,7 +2768,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx.internal;
 				STRIP_INSTALLED_PRODUCT = YES;
-				USER_HEADER_SEARCH_PATHS = "./dyld3 ./dyld3/shared-cache $SRCROOT/testing/include";
+				USER_HEADER_SEARCH_PATHS = (
+					./dyld3,
+					"./dyld3/shared-cache",
+					$SRCROOT/testing/include,
+				);
 			};
 			name = Debug;
 		};
@@ -2856,7 +2799,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = local_test_runner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -2865,7 +2812,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx.internal;
 				STRIP_INSTALLED_PRODUCT = YES;
-				USER_HEADER_SEARCH_PATHS = "./dyld3 ./dyld3/shared-cache $SRCROOT/testing/include";
+				USER_HEADER_SEARCH_PATHS = (
+					./dyld3,
+					"./dyld3/shared-cache",
+					$SRCROOT/testing/include,
+				);
 			};
 			name = Release;
 		};
@@ -2910,7 +2861,11 @@
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
-				USER_HEADER_SEARCH_PATHS = "./dyld3 ./dyld3/shared-cache ./testing/include";
+				USER_HEADER_SEARCH_PATHS = (
+					./dyld3,
+					"./dyld3/shared-cache",
+					./testing/include,
+				);
 			};
 			name = Debug;
 		};
@@ -2950,7 +2905,11 @@
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
-				USER_HEADER_SEARCH_PATHS = "./dyld3 ./dyld3/shared-cache ./testing/include";
+				USER_HEADER_SEARCH_PATHS = (
+					./dyld3,
+					"./dyld3/shared-cache",
+					./testing/include,
+				);
 			};
 			name = Release;
 		};
@@ -3448,8 +3407,14 @@
 				SKIP_INSTALL = NO;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos";
 				SUPPORTS_TEXT_BASED_API = YES;
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)/$(DRIVERKITROOT)/Runtime/System/Library/Frameworks $(SDKROOT)/$(DRIVERKITROOT)/System/Library/PrivateFrameworks";
-				SYSTEM_HEADER_SEARCH_PATHS = "$(SDKROOT)/$(DRIVERKITROOT)/Runtime/usr/local/include $(SDKROOT)/$(DRIVERKITROOT)/Runtime/usr/include";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/$(DRIVERKITROOT)/Runtime/System/Library/Frameworks",
+					"$(SDKROOT)/$(DRIVERKITROOT)/System/Library/PrivateFrameworks",
+				);
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/$(DRIVERKITROOT)/Runtime/usr/local/include",
+					"$(SDKROOT)/$(DRIVERKITROOT)/Runtime/usr/include",
+				);
 				TAPI_VERIFY_MODE = ErrorsOnly;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_EXPORT_DECL = "__attribute__((visibility(\"default\")))";
@@ -3514,8 +3479,14 @@
 				STRIP_INSTALLED_PRODUCT = YES;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos";
 				SUPPORTS_TEXT_BASED_API = YES;
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)/$(DRIVERKITROOT)/Runtime/System/Library/Frameworks $(SDKROOT)/$(DRIVERKITROOT)/System/Library/PrivateFrameworks";
-				SYSTEM_HEADER_SEARCH_PATHS = "$(SDKROOT)/$(DRIVERKITROOT)/Runtime/usr/local/include $(SDKROOT)/$(DRIVERKITROOT)/Runtime/usr/include";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/$(DRIVERKITROOT)/Runtime/System/Library/Frameworks",
+					"$(SDKROOT)/$(DRIVERKITROOT)/System/Library/PrivateFrameworks",
+				);
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/$(DRIVERKITROOT)/Runtime/usr/local/include",
+					"$(SDKROOT)/$(DRIVERKITROOT)/Runtime/usr/include",
+				);
 				TAPI_VERIFY_MODE = ErrorsOnly;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_EXPORT_DECL = "__attribute__((visibility(\"default\")))";
@@ -3873,7 +3844,11 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx.internal;
-				USER_HEADER_SEARCH_PATHS = "./dyld3 ./dyld3/shared-cache ./testing/include";
+				USER_HEADER_SEARCH_PATHS = (
+					./dyld3,
+					"./dyld3/shared-cache",
+					./testing/include,
+				);
 			};
 			name = Debug;
 		};
@@ -3916,7 +3891,11 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx.internal;
-				USER_HEADER_SEARCH_PATHS = "./dyld3 ./dyld3/shared-cache ./testing/include";
+				USER_HEADER_SEARCH_PATHS = (
+					./dyld3,
+					"./dyld3/shared-cache",
+					./testing/include,
+				);
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -4018,10 +3997,15 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				INSTALL_PATH = "$(INSTALL_LOCATION)/usr/local/bin";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/lib/system,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_CFLAGS = "-DBUILDING_SHARED_CACHE_UTIL=1";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = dyld_shared_cache_util;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
 			};
 			name = Debug;
@@ -4035,68 +4019,17 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
 				INSTALL_PATH = "$(INSTALL_LOCATION)/usr/local/bin";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/lib/system,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_CFLAGS = "-DBUILDING_SHARED_CACHE_UTIL=1";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = dyld_shared_cache_util;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
-			};
-			name = Release;
-		};
-		F9D1001314D8D0BB00099D91 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = "";
-				DYLIB_CURRENT_VERSION = "";
-				EXECUTABLE_EXTENSION = bundle;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)$(INSTALL_LOCATION)/usr/lib";
-				"INSTALL_PATH[sdk=*]" = "$(INSTALL_PATH_PREFIX)$(INSTALL_LOCATION)/usr/local/lib";
-				"INSTALL_PATH[sdk=macosx*]" = "$(INSTALL_PATH_PREFIX)$(INSTALL_LOCATION)/usr/lib";
-				MACH_O_TYPE = mh_bundle;
-				OTHER_CPLUSPLUSFLAGS = (
-					"-stdlib=libc++",
-					"$(OTHER_CFLAGS)",
-				);
-				OTHER_LDFLAGS = (
-					"-stdlib=libc++",
-					"-Wl,-exported_symbol,_dyld_shared_cache_extract_dylibs_progress",
-				);
-				PRODUCT_NAME = dsc_extractor;
-			};
-			name = Debug;
-		};
-		F9D1001414D8D0BB00099D91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = "";
-				DYLIB_CURRENT_VERSION = "";
-				EXECUTABLE_EXTENSION = bundle;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
-				INSTALL_PATH = "$(INSTALL_PATH_PREFIX)$(INSTALL_LOCATION)/usr/lib";
-				"INSTALL_PATH[sdk=*]" = "$(INSTALL_PATH_PREFIX)$(INSTALL_LOCATION)/usr/local/lib";
-				"INSTALL_PATH[sdk=macosx*]" = "$(INSTALL_PATH_PREFIX)$(INSTALL_LOCATION)/usr/lib";
-				MACH_O_TYPE = mh_bundle;
-				OTHER_CPLUSPLUSFLAGS = (
-					"-stdlib=libc++",
-					"$(OTHER_CFLAGS)",
-				);
-				OTHER_LDFLAGS = (
-					"-stdlib=libc++",
-					"-Wl,-exported_symbol,_dyld_shared_cache_extract_dylibs_progress",
-				);
-				PRODUCT_NAME = dsc_extractor;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -4260,7 +4193,11 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
 				SUPPORTS_TEXT_BASED_API = YES;
 				TAPI_VERIFY_MODE = Pedantic;
-				USER_HEADER_SEARCH_PATHS = "./dyld3 ./dyld3/shared-cache $(DERIVED_FILE_DIR)";
+				USER_HEADER_SEARCH_PATHS = (
+					./dyld3,
+					"./dyld3/shared-cache",
+					"$(DERIVED_FILE_DIR)",
+				);
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_EXPORT_DECL = "__attribute__((visibility(\"default\")))";
 				WARNING_CFLAGS = (
@@ -4326,7 +4263,11 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
 				SUPPORTS_TEXT_BASED_API = YES;
 				TAPI_VERIFY_MODE = Pedantic;
-				USER_HEADER_SEARCH_PATHS = "./dyld3 ./dyld3/shared-cache $(DERIVED_FILE_DIR)";
+				USER_HEADER_SEARCH_PATHS = (
+					./dyld3,
+					"./dyld3/shared-cache",
+					"$(DERIVED_FILE_DIR)",
+				);
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_EXPORT_DECL = "__attribute__((visibility(\"default\")))";
 				WARNING_CFLAGS = (
@@ -4391,9 +4332,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ./include;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
-				USER_HEADER_SEARCH_PATHS = "./dyld3 ./dyld3/shared-cache";
+				USER_HEADER_SEARCH_PATHS = (
+					./dyld3,
+					"./dyld3/shared-cache",
+				);
 				WARNING_CFLAGS = "-Wimplicit-fallthrough";
 			};
 			name = Debug;
@@ -4436,9 +4380,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ./include;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
-				USER_HEADER_SEARCH_PATHS = "./dyld3 ./dyld3/shared-cache";
+				USER_HEADER_SEARCH_PATHS = (
+					./dyld3,
+					"./dyld3/shared-cache",
+				);
 				WARNING_CFLAGS = "-Wimplicit-fallthrough";
 			};
 			name = Release;
@@ -4501,8 +4448,16 @@
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
-				SYSTEM_HEADER_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks/System.framework/PrivateHeaders ${SDKROOT)/usr/local/include";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/dyld3 $(SRCROOT)/shared-cache $(SRCROOT)/include $(SRCROOT)/testing/include";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/System/Library/Frameworks/System.framework/PrivateHeaders",
+					"${SDKROOT)/usr/local/include",
+				);
+				USER_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/dyld3",
+					"$(SRCROOT)/shared-cache",
+					"$(SRCROOT)/include",
+					"$(SRCROOT)/testing/include",
+				);
 			};
 			name = Debug;
 		};
@@ -4511,8 +4466,16 @@
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
-				SYSTEM_HEADER_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks/System.framework/PrivateHeaders ${SDKROOT)/usr/local/include";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/dyld3 $(SRCROOT)/shared-cache $(SRCROOT)/include $(SRCROOT)/testing/include";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/System/Library/Frameworks/System.framework/PrivateHeaders",
+					"${SDKROOT)/usr/local/include",
+				);
+				USER_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/dyld3",
+					"$(SRCROOT)/shared-cache",
+					"$(SRCROOT)/include",
+					"$(SRCROOT)/testing/include",
+				);
 			};
 			name = Release;
 		};
@@ -4695,15 +4658,6 @@
 			buildConfigurations = (
 				F99B8E580FEC10F600701838 /* Debug */,
 				F99B8E590FEC10F600701838 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9D1001714D8D0F100099D91 /* Build configuration list for PBXNativeTarget "dsc_extractor" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9D1001314D8D0BB00099D91 /* Debug */,
-				F9D1001414D8D0BB00099D91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

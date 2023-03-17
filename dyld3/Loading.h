@@ -29,7 +29,6 @@
 #include <string.h>
 #include <stdint.h>
 #include <mach/mach.h>
-#include <_simple.h>
 
 #include "Closure.h"
 #include "MachOLoaded.h"

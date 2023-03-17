@@ -57,7 +57,7 @@
 #include "objc-shared-cache.h"
 
 #if TARGET_OS_OSX
-#define DSC_BUNDLE_REL_PATH "../../lib/dsc_extractor.bundle"
+#define DSC_BUNDLE_REL_PATH "/usr/lib/dsc_extractor.bundle"
 #else
 #define DSC_BUNDLE_REL_PATH "../lib/dsc_extractor.bundle"
 #endif
@@ -1398,7 +1398,24 @@ int main (int argc, const char* argv[]) {
         dyld3::json::printJSON(root, 0, std::cout);
     }
     else if ( options.mode == modeExtract ) {
-        return dyld_shared_cache_extract_dylibs(sharedCachePath, options.extractionDir);
+        const char *pathBuffer = DSC_BUNDLE_REL_PATH;
+        void* handle = dlopen(pathBuffer, RTLD_LAZY);
+        if ( handle == NULL ) {
+            fprintf(stderr, "Error: dsc_extractor.bundle could not be loaded at %s\n", pathBuffer);
+            return 1;
+        }
+
+        typedef int (*extractor_proc)(const char* shared_cache_file_path, const char* extraction_root_path,
+                                      void (^progress)(unsigned current, unsigned total));
+
+        extractor_proc proc = (extractor_proc)dlsym(handle, "dyld_shared_cache_extract_dylibs_progress");
+        if ( proc == NULL ) {
+            fprintf(stderr, "Error: dsc_extractor.bundle did not have dyld_shared_cache_extract_dylibs_progress symbol\n");
+            return 1;
+        }
+
+        int result = (*proc)(sharedCachePath, options.extractionDir, ^(unsigned c, unsigned total) { } );
+        return result;
     }
     else if ( options.mode == modeObjCImpCaches ) {
         if (sharedCachePath == nullptr) {

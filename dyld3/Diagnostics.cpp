@@ -30,7 +30,7 @@
 #include <uuid/uuid.h>
 #include <fcntl.h>
 #include <errno.h>
-#include <_simple.h>
+#include "_simple.h"
 #include <unistd.h>
 #include <sys/uio.h>
 #include <sys/param.h>
@@ -47,7 +47,17 @@
 #include <mach-o/nlist.h>
 #include <mach-o/fat.h>
 #include <pthread.h>
-#include <libc_private.h>
+
+extern "C" {
+#include <os/availability.h>
+#include <sys/cdefs.h>
+#include <stddef.h>
+__BEGIN_DECLS
+API_AVAILABLE(macos(10.11), ios(9.0), tvos(9.0), watchos(2.0))
+extern void
+abort_report_np(const char *, ...) __dead2 __cold __printflike(1, 2);
+__END_DECLS
+}
 
 #include "Diagnostics.h"
 
